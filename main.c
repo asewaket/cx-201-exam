@@ -9,7 +9,7 @@ int main() {
     int difference = a - b;    // Calculate difference
 
     printf("Sum: %d\n", sum);           // Print sum
-    printf("Difference: %d\n", difference); // Print difference
+    printf("Difference: %f\n", difference); // Print difference
 
-    return 0;
+    return 1;
 }
