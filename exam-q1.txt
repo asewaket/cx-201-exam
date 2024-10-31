@@ -1,0 +1,87 @@
+it@IT-RDIA-NSH:~$ sudo apt update
+[sudo] password for it: 
+Hit:1 http://archive.ubuntu.com/ubuntu noble InRelease
+Get:2 http://security.ubuntu.com/ubuntu noble-security InRelease [126 kB]      
+Get:3 http://archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]        
+Get:4 https://packages.microsoft.com/repos/code stable InRelease [3,590 B]     
+Hit:5 https://dl.google.com/linux/chrome/deb stable InRelease                  
+Get:6 https://packages.microsoft.com/repos/code stable/main amd64 Packages [18.4 kB]
+Get:7 http://archive.ubuntu.com/ubuntu noble-backports InRelease [126 kB]      
+Ign:8 https://ppa.launchpadcontent.net/videolan/stable-daily/ubuntu noble InRelease
+Get:9 https://packages.microsoft.com/repos/code stable/main armhf Packages [18.6 kB]
+Get:10 https://packages.microsoft.com/repos/code stable/main arm64 Packages [18.5 kB]
+Get:11 http://security.ubuntu.com/ubuntu noble-security/main amd64 Packages [438 kB]
+Err:12 https://ppa.launchpadcontent.net/videolan/stable-daily/ubuntu noble Release
+  404  Not Found [IP: 2620:2d:4000:1::81 443]
+Get:13 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [611 kB]
+Get:14 http://security.ubuntu.com/ubuntu noble-security/main amd64 Components [7,184 B]
+Get:15 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Components [212 B]
+Get:16 http://security.ubuntu.com/ubuntu noble-security/universe amd64 Packages [557 kB]
+Get:17 http://security.ubuntu.com/ubuntu noble-security/universe amd64 Components [52.0 kB]
+Get:18 http://security.ubuntu.com/ubuntu noble-security/multiverse amd64 Components [212 B]
+Get:19 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Components [114 kB]
+Get:20 http://archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Components [212 B]
+Get:21 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [710 kB]
+Get:22 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 Components [306 kB]
+Get:23 http://archive.ubuntu.com/ubuntu noble-updates/multiverse amd64 Components [940 B]
+Get:24 http://archive.ubuntu.com/ubuntu noble-backports/main amd64 Components [208 B]
+Get:25 http://archive.ubuntu.com/ubuntu noble-backports/restricted amd64 Components [216 B]
+Get:26 http://archive.ubuntu.com/ubuntu noble-backports/universe amd64 Components [21.2 kB]
+Get:27 http://archive.ubuntu.com/ubuntu noble-backports/multiverse amd64 Components [212 B]
+Reading package lists... Done                                                
+E: The repository 'https://ppa.launchpadcontent.net/videolan/stable-daily/ubuntu noble Release' does not have a Release file.
+N: Updating from such a repository can't be done securely, and is therefore disabled by default.
+N: See apt-secure(8) manpage for repository creation and user configuration details.
+it@IT-RDIA-NSH:~$ sudo apt install -y nginx curl git
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+nginx is already the newest version (1.24.0-2ubuntu7.1).
+curl is already the newest version (8.5.0-2ubuntu10.4).
+git is already the newest version (1:2.43.0-1ubuntu7.1).
+0 upgraded, 0 newly installed, 0 to remove and 17 not upgraded.
+it@IT-RDIA-NSH:~$ #!/bin/bash
+sudo apt update
+sudo apt install -y nginx curl git
+Hit:1 http://archive.ubuntu.com/ubuntu noble InRelease
+Hit:2 http://archive.ubuntu.com/ubuntu noble-updates InRelease                 
+Hit:3 http://archive.ubuntu.com/ubuntu noble-backports InRelease               
+Hit:4 https://packages.microsoft.com/repos/code stable InRelease               
+Ign:5 https://ppa.launchpadcontent.net/videolan/stable-daily/ubuntu noble InRelease
+Hit:6 https://dl.google.com/linux/chrome/deb stable InRelease       
+Hit:7 http://security.ubuntu.com/ubuntu noble-security InRelease
+Err:8 https://ppa.launchpadcontent.net/videolan/stable-daily/ubuntu noble Release
+  404  Not Found [IP: 2620:2d:4000:1::81 443]
+Reading package lists... Done
+E: The repository 'https://ppa.launchpadcontent.net/videolan/stable-daily/ubuntu noble Release' does not have a Release file.
+N: Updating from such a repository can't be done securely, and is therefore disabled by default.
+N: See apt-secure(8) manpage for repository creation and user configuration details.
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+nginx is already the newest version (1.24.0-2ubuntu7.1).
+curl is already the newest version (8.5.0-2ubuntu10.4).
+git is already the newest version (1:2.43.0-1ubuntu7.1).
+0 upgraded, 0 newly installed, 0 to remove and 17 not upgraded.
+it@IT-RDIA-NSH:~$ chmod +x deploy_packages.sh
+chmod: cannot access 'deploy_packages.sh': No such file or directory
+it@IT-RDIA-NSH:~$ ./deploy_packages.sh
+bash: ./deploy_packages.sh: No such file or directory
+it@IT-RDIA-NSH:~$ vi deploy_packages.sh
+it@IT-RDIA-NSH:~$ ./deploy_packages.sh
+bash: ./deploy_packages.sh: Permission denied
+it@IT-RDIA-NSH:~$ chmod +x deploy_packages.sh
+it@IT-RDIA-NSH:~$ ./deploy_packages.sh
+it@IT-RDIA-NSH:~$ sudo apt install nginx-extras
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+nginx-extras is already the newest version (1.24.0-2ubuntu7.1).
+0 upgraded, 0 newly installed, 0 to remove and 17 not upgraded.
+it@IT-RDIA-NSH:~$ sudo apt install -f
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+0 upgraded, 0 newly installed, 0 to remove and 17 not upgraded.
+it@IT-RDIA-NSH:~$ 
+
